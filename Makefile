@@ -1,6 +1,6 @@
 CC       = nuitka3
 CC_FLAGS = --onefile --disable-console --output-filename=Rezi-PBP.exe
-FILE     = main.py
+FILE     = Rezi-PBP.py
 DEPS     = requirements.txt
 PM       = pip
 
