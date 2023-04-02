@@ -17,7 +17,7 @@ You will need:
 
 First, install the dependencies with `pip install -r requirements.txt`
 
-Then, to build you run `nuitka3 --onefile --disable-console --output-filename=Rezi-PBP.exe`. If you want it to be verbose then you can replace the `--quiet` flag with `--verbose`
+Then, to build you run `nuitka3 --onefile --quiet --disable-console --output-filename=Rezi-PBP.exe`. If you want it to be verbose then you can replace the `--quiet` flag with `--verbose`
 
 ## How it works:
 
