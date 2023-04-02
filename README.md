@@ -15,9 +15,9 @@ You will need:
 - [Python 3](https://python.org)
 - [Nuitka](https://github.com/Nuitka/Nuitka)
 
-First, install the dependencies with `pip install -r requirements.txt`
+First, install the dependencies with `pip install -r requirements.txt` or `make deps`
 
-Then, to build you run `nuitka3 --onefile --quiet --disable-console --output-filename=Rezi-PBP.exe main.py`. If you want it to be verbose then you can replace the `--quiet` flag with `--verbose`
+Then, to build you run `make rezi`. If you want it to be verbose then you can run `make rezi-verb`
 
 ## How it works:
 
