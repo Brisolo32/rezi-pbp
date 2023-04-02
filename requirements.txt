@@ -1,7 +1,6 @@
 # Rezi PBP deps
 pandas
 requests
-re
 
 # Nuitka deps
 zstandard
