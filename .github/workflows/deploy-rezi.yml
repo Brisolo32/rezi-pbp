@@ -1,0 +1,44 @@
+name: Builds and deploys Rezi-PBP
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup python3
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          architecture: "x64"
+          cache: "pip"
+          cache-dependency-path: |
+            **/requirements*.txt
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build executable
+        uses: Nuitka/Nuitka-Action@main
+        with:
+          nuitka-version: main
+          script-name: main.py
+          disable-console: true
+          onefile: true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifacts@v3
+        with:
+          name: Rezi-PBP - ${{ runner.os }}
+          path: |
+            build/*.exe
+            build/*.bin
+            build/*.app/**/*
