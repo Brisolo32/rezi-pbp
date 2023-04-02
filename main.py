@@ -28,6 +28,7 @@ import json
 import requests
 import re
 import sys
+from os import path
 from io import StringIO
 
 # Defines the data to where will it get the rezi.csv file
@@ -89,11 +90,13 @@ else:
 
 # Writes the data to an file with the name in cache_location
 encoded_json = json.dumps(res_value)
+joined_path = path.join(cache_location, "results.json")
+print(f"Joined path: {joined_path}")
 
-with open(f"{cache_location}", "w") as cache_file:
+with open(joined_path, "w") as cache_file:
     cache_file.write(encoded_json)
     cache_file.close()
 
-with open(cache_location, 'r') as f:
+with open(joined_path, 'r') as f:
     data = f.read()
     print(f"Data written to file: {data}")
