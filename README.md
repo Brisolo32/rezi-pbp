@@ -1,4 +1,4 @@
-# PBP-Rezi
+# Rezi-PBP
 
 A plugin for [PBP]() that gets data from Rezi
 
