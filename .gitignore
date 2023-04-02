@@ -1,2 +1,6 @@
 rezi.csv
 *.json
+*.build/
+*.dist/
+*.onefile-build/
+Rezi-PBP.exe

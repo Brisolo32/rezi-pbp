@@ -28,6 +28,7 @@ import json
 import requests
 import re
 import sys
+from io import StringIO
 
 # Defines the data to where will it get the rezi.csv file
 owner = "Brisolo32"
@@ -51,11 +52,9 @@ print(f"Cache Location: {cache_location}")
 
 # Sends a request to the URL variable and writes it to an rezi.csv file
 response = requests.get(url)
-file = open(f'./{filename}', 'wb')
-file.write(response.content)
-file.close()
+csv = StringIO(response.content.decode("utf-8"))
 
-df = pd.read_csv("./rezi.csv")
+df = pd.read_csv(csv)
 out: list[int] = []
 
 # Goes through every value on the list and gets
