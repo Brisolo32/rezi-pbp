@@ -30,7 +30,7 @@ jobs:
         uses: Nuitka/Nuitka-Action@main
         with:
           nuitka-version: main
-          script-name: main.py
+          script-name: Rezi-PBP.py
           disable-console: true
           onefile: true
 
