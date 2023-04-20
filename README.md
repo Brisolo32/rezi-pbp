@@ -1,3 +1,5 @@
+# THIS REPO IS ARCHIVED. USE [REZI-PBP-RS](https://github.com/brisolo32/rezi-pbp-rs)
+
 # Rezi-PBP
 
 A plugin for [PBP]() that gets data from Rezi
